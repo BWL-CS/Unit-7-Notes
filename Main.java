@@ -69,5 +69,24 @@ public class Main {
       System.out.println(toBuy);
       System.out.println("Did not need the plastic:" + removedElement);
 
+
+
+
+
+      ArrayList<String> toDoList = new ArrayList<String>();
+      toDoList.add("Take a bath");
+      toDoList.add("Clean the knife");
+      toDoList.add("Destroy evidence");
+      toDoList.add("Capture Hostage");
+
+      System.out.println(toDoList);
+
+      String newElement = toDoList.set(1, "Reload the guns");
+System.out.println(toDoList);
+System.out.println(toDoList.size() + " Things to do before the cops catch me.");
+System.out.println("I should really " + toDoList.get(1));
+
+String deleted = toDoList.remove(0);
+System.out.println(toDoList);
    }
 }
