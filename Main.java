@@ -54,8 +54,20 @@ public class Main {
       int lastIndex = toBuy.size() - 1;
       String lastElement = toBuy.get(lastIndex);
       System.out.println(lastElement);
-      System.out.printkn(toBuy.get(3));
+      System.out.println(toBuy.get(3));
 
+      // .set(int index, obj) REPLACES element at that index with the new obj
+      // retruns the replaced element (same type as the list holds)
+      String replacedElement = toBuy.set(3, "Gun");
+      System.out.println(toBuy);
+//Often, you won't need to store the return output
+      toBuy.set(2, "Knife"); //like calling a Void method
+      System.out.println(toBuy);
+
+
+      String removedElement = toBuy.remove(1);
+      System.out.println(toBuy);
+      System.out.println("Did not need the plastic:" + removedElement);
 
    }
 }
