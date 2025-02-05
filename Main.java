@@ -88,5 +88,26 @@ System.out.println("I should really " + toDoList.get(1));
 
 String deleted = toDoList.remove(0);
 System.out.println(toDoList);
+
+
+// 7.3 Traversing with Loops
+ArrayList<Integer> bingoNumbers = new ArrayList<Integer>();
+bingoNumbers.add(99);
+bingoNumbers.add(29);
+bingoNumbers.add(77);
+bingoNumbers.add(13);
+
+//Enhanced FOR-EACh LOOP
+int total = 0;
+int product = 1;
+for (Integer num : bingoNumbers){
+      total = total + num; 
+      System.out.println("Sum of bingo numbers" + total);
+
+      product *= num;
+
+
+}
+System.out.println("Product of bingo numbers " + product);
    }
 }
