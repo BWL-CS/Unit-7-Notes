@@ -109,5 +109,41 @@ for (Integer num : bingoNumbers){
 
 }
 System.out.println("Product of bingo numbers " + product);
+ // STANDARD FOR LOOP (indexed)
+int sum = 0;
+     // DIFFERENT from Arrays:
+     //1. use ArrayList.size() instead of Array.length
+     //2. use ArrayList.get(i) istead of Array[i]
+      for (int i=0; i < bingoNumbers.size(); i++) {
+            sum = sum + bingoNumbers.get(i);
+
+      }
+      System.out.println(sum);
+
+      ArrayList<String> watchList = new ArrayList<String>();
+      watchList.add("Death Note");
+      watchList.add("JJBA part 4");
+      watchList.add("Saiki K");
+      watchList.add("Bleach");
+      watchList.add("AOT");
+
+      //Example: search & remove
+      boolean found = false; //haven't searched yet
+      int index = 0; // need index to use list methods
+      String watchedShow = "AOT";
+      while (index < watchList.size()){
+            if (watchedShow.equals(watchList.get(index))){
+                  watchList.remove(index);
+                  found = true;
+            }
+            else {
+                  index++;
+            }
+            
+      }
+      System.out.println(watchList);
+
    }
 }
+
+
