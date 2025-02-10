@@ -4,6 +4,31 @@ import java.util.ArrayList;
 
 public class Main {
 
+
+      //Return index of target
+      public static int binarySearch(ArrayList<Integer> list, int target){
+            //Set up "search area" bounds
+            int left = 0;
+            int right = list.size() - 1;
+
+            while(left <= right){
+                  //Set up a new "middle" each iteration
+                  int middle = (left + right) / 2;
+                  if (target < list.get(middle)){
+                        right = middle - 1;
+                  }
+                  else if (target > list.get(middle)){
+                        left = middle + 1;
+                  }
+                  else {
+                        return middle; //found target
+                  }
+            }
+            // Return -1 if target not found in list
+            return -1;
+
+
+      }
    public static void main(String []args) {
       // DECLARE an ArrayList object
       // Type <> is required, each ArrayList can hold one type of object
@@ -143,6 +168,17 @@ int sum = 0;
       }
       System.out.println(watchList);
 
+      // Testing BINARY SEARCH method on a SORTED list
+      ArrayList<Integer> gradeLevels = new ArrayList<Integer>();
+      // Populate a list using a loop
+      for (int i= 0; i <= 12; i++) {
+            gradeLevels.add(i);
+      }
+      System.out.println("Grade Levels: ");
+      System.out.println(gradeLevels);
+      int indexOfTarget = binarySearch(gradeLevels, 9);
+System.out.println("Index of Target: " + indexOfTarget);
+ 
    }
 }
 
